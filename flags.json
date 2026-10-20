@@ -2,5 +2,9 @@
   {
     "slug": "issue-142",
     "description": "ojones/ai-factory#142: factory-bench: Add version endpoint behind feature flag"
+  },
+  {
+    "slug": "issue-146",
+    "description": "ojones/ai-factory#146: factory-bench: Add GET /api/ping endpoint"
   }
 ]
