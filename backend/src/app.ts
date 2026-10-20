@@ -3,6 +3,7 @@ import express, { type Express } from "express";
 import { logger } from "./logger";
 import { healthRouter } from "./routes/health";
 import { versionRouter } from "./routes/version";
+import { pingRouter } from "./routes/ping";
 import { previewMiddleware } from "./feature-flags";
 
 // The built frontend lives at ../../frontend/dist relative to this file's
@@ -39,6 +40,7 @@ export function createApp(): Express {
   // Health checks (Fly's included) answer before anything else is mounted.
   app.use(healthRouter);
   app.use(versionRouter);
+  app.use(pingRouter);
 
   // One container: the backend serves the built frontend's static assets
   // itself (STANDARDS-DEPLOYMENT.md) — no separate frontend server.
